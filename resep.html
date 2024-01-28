@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TEH INDONESIA - Resep Teh</title>
+    <link rel="stylesheet" href="../w3.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: url("tea2.jpg") no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .button-container {
+        position: absolute;
+        top: 10%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .custom-button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 7px;
+        border: 1px solid #fff;
+        box-shadow: 0 0 5px 5px rgb(35, 109, 38);
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        margin: 0 20px;
+      }
+
+      .custom-button:hover {
+        letter-spacing: 0.025cm;
+        transform: scale(1.1);
+        box-shadow: none;
+      }
+
+      .recipe-container {
+        text-align: center;
+        color: white;
+      }
+
+      .recipe-item {
+        margin: 20px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        display: inline-block;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .recipe-image {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        animation: slideIn 1s ease-in-out;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-container">
+      <button class="custom-button" onclick="navigateToHistory()">
+        Sejarah
+      </button>
+      <button class="custom-button" onclick="navigateToTypes()">
+        Jenis Teh
+      </button>
+      <button class="custom-button" onclick="navigateToBenefits()">
+        Manfaat Teh
+      </button>
+      <button class="custom-button" onclick="navigateToRitual()">
+        Resep Teh
+      </button>
+      <button class="custom-button" onclick="navigateToRecipe()">Utama</button>
+      <button class="custom-button" onclick="navigateToProfile()">
+        Profil
+      </button>
+    </div>
+
+    <div class="recipe-container">
+      <div class="recipe-item">
+        <h2>Resep Teh Hangat</h2>
+        <p>
+          Teh hangat sangat cocok untuk dinikmati di cuaca sejuk. Berikut adalah
+          langkah-langkah membuat teh hangat yang lezat:
+        </p>
+        <ol>
+          <li>Rebus air hingga mendidih.</li>
+          <li>Masukkan teh bubuk atau daun teh ke dalam air mendidih.</li>
+          <li>Tunggu hingga warna teh berubah sesuai selera.</li>
+          <li>Tambahkan gula atau madu jika diinginkan.</li>
+          <li>Saring teh dan sajikan.</li>
+        </ol>
+      </div>
+    </div>
+
+    <script>
+      function navigateToHistory() {
+        window.location.href = "sejarah.html";
+      }
+
+      function navigateToTypes() {
+        window.location.href = "jenis.html";
+      }
+
+      function navigateToBenefits() {
+        window.location.href = "manfaat.html";
+      }
+
+      function navigateToRitual() {
+        window.location.href = "resep.html";
+      }
+
+      function navigateToRecipe() {
+        window.location.href = "utama.html";
+      }
+
+      function navigateToProfile() {
+        window.location.href = "profil.html";
+      }
+    </script>
+  </body>
+</html>

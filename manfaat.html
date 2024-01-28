@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TEH INDONESIA</title>
+    <link rel="stylesheet" href="../w3.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: url("tea2.jpg") no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .button-container {
+        position: absolute;
+        top: 10%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .custom-button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 7px;
+        border: 1px solid #fff;
+        box-shadow: 0 0 5px 5px rgb(35, 109, 38);
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        margin: 0 20px;
+      }
+
+      .custom-button:hover {
+        letter-spacing: 0.025cm;
+        transform: scale(1.1);
+        box-shadow: none;
+      }
+
+      .content-container {
+        text-align: center;
+        color: #fff;
+        margin-top: 5%;
+      }
+
+      .animated-text {
+        font-size: 18px;
+        animation: textAnimation 2s infinite;
+      }
+
+      @keyframes textAnimation {
+        0% {
+          transform: translateY(0);
+          opacity: 0.8;
+        }
+
+        50% {
+          transform: translateY(-10px);
+          opacity: 1;
+        }
+
+        100% {
+          transform: translateY(0);
+          opacity: 0.8;
+        }
+      }
+
+      .tea-image {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="button-container">
+      <button class="custom-button" onclick="navigateToHistory()">
+        Sejarah
+      </button>
+      <button class="custom-button" onclick="navigateToTypes()">
+        Jenis Teh
+      </button>
+      <button class="custom-button" onclick="navigateToBenefits()">
+        Manfaat Teh
+      </button>
+      <button class="custom-button" onclick="navigateToRitual()">
+        Resep Teh
+      </button>
+      <button class="custom-button" onclick="navigateToRecipe()">Utama</button>
+      <button class="custom-button" onclick="navigateToProfile()">
+        Profil
+      </button>
+    </div>
+
+    <div class="content-container">
+      <img src="manfaatteh.jpg" alt="Teh" class="tea-image" />
+      <p class="animated-text">Manfaat Teh :</p>
+      <p class="animated-text">
+        1. **Kaya Antioksidan:** Teh mengandung senyawa antioksidan, seperti
+        polifenol, yang dapat membantu melawan radikal bebas dalam tubuh dan
+        melindungi sel-sel dari kerusakan.
+      </p>
+      <p class="animated-text">
+        2. **Meningkatkan Kesehatan Jantung:** Beberapa studi menunjukkan bahwa
+        konsumsi teh secara teratur dapat membantu menurunkan risiko penyakit
+        jantung. Teh hijau, khususnya, dikaitkan dengan penurunan kadar
+        kolesterol jahat (LDL) dan peningkatan kolesterol baik (HDL).
+      </p>
+      <p class="animated-text">
+        3. **Menurunkan Risiko Diabetes:** Teh hijau dapat membantu mengatur
+        gula darah dan meningkatkan sensitivitas insulin, yang dapat membantu
+        mengurangi risiko diabetes tipe 2.
+      </p>
+      <p class="animated-text">
+        4. **Membantu Pencernaan:** Teh herbal tertentu, seperti teh peppermint
+        dan chamomile, dapat membantu meredakan gangguan pencernaan, mengurangi
+        perut kembung, dan memberikan efek menenangkan pada lambung.
+      </p>
+    </div>
+
+    <script>
+      function navigateToHistory() {
+        window.location.href = "sejarah.html";
+      }
+
+      function navigateToTypes() {
+        window.location.href = "jenis.html";
+      }
+
+      function navigateToBenefits() {
+        window.location.href = "manfaat.html";
+      }
+
+      function navigateToRitual() {
+        window.location.href = "resep.html";
+      }
+
+      function navigateToRecipe() {
+        window.location.href = "utama.html";
+      }
+
+      function navigateToProfile() {
+        window.location.href = "profil.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TEH INDONESIA</title>
+    <link rel="stylesheet" href="../w3.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: url("tea2.jpg") no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .button-container {
+        position: absolute;
+        top: 10%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .custom-button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 7px;
+        border: 1px solid #fff;
+        box-shadow: 0 0 5px 5px rgb(35, 109, 38);
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        margin: 0 20px;
+      }
+
+      .custom-button:hover {
+        letter-spacing: 0.025cm;
+        transform: scale(1.1);
+        box-shadow: none;
+      }
+
+      .tea-button {
+        cursor: pointer;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        25%,
+        75% {
+          transform: translateY(-10px);
+        }
+        50% {
+          transform: translateY(0);
+        }
+      }
+
+      .tea-button img {
+        width: 30px;
+        height: auto;
+        border-radius: 50%;
+      }
+
+      .tea-types-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .tea-type {
+        width: 120px;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .tea-type img {
+        max-width: 100%;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+
+      .tea-type h3 {
+        font-size: 12px;
+      }
+
+      .tea-type:hover {
+        transform: scale(1.05);
+      }
+
+      .explanation {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="button-container">
+      <button class="custom-button" onclick="navigateToHistory()">
+        Sejarah
+      </button>
+      <button class="custom-button" onclick="navigateToTypes()">
+        Jenis Teh
+      </button>
+      <button class="custom-button" onclick="navigateToBenefits()">
+        Manfaat Teh
+      </button>
+      <button class="custom-button" onclick="navigateToRitual()">
+        Resep Teh
+      </button>
+      <button class="custom-button" onclick="navigateToRecipe()">
+        Utama Teh
+      </button>
+      <button class="custom-button" onclick="navigateToProfile()">
+        Profile
+      </button>
+    </div>
+    <div class="w3-container tea-types-container">
+      <div
+        class="tea-type"
+        onclick="showExplanation('Teh Hijau adalah jenis teh yang diproses minim sehingga tetap mempertahankan kehijauan daun teh.h,h')"
+      >
+        <img src="tehhijau.jpg" alt="Teh Hijau" />
+        <h3>Teh Hijau</h3>
+      </div>
+      <div
+        class="tea-type"
+        onclick="showExplanation('Teh Hitam adalah teh yang difermentasi sepenuhnya, memberikan rasa dan warna yang lebih pekat.')"
+      >
+        <img src="tehhitam.jpg" alt="Teh Hitam" />
+        <h3>Teh Hitam</h3>
+      </div>
+      <div
+        class="tea-type"
+        onclick="showExplanation('Teh Oolong mengalami proses fermentasi sebagian, memberikan rasa yang unik di antara teh hijau & hitam.')"
+      >
+        <img src="teholong.jpg" alt="Teh Oolong" />
+        <h3>Teh Oolong</h3>
+      </div>
+      <div
+        class="tea-type"
+        onclick="showExplanation('Teh Herbal terbuat dari campuran bahan alami seperti buah-buahan, bunga, dan rempah-rempah.')"
+      >
+        <img src="tehherbal.jpg" alt="Teh Herbal" />
+        <h3>Teh Herbal</h3>
+      </div>
+      <div
+        class="tea-type"
+        onclick="showExplanation('Teh Chai adalah campuran teh hitam dengan rempah-rempah seperti kayu manis, jahe, dan kapulaga.')"
+      >
+        <img src="tehchai.jpg" alt="Teh Chai" />
+        <h3>Teh Chai</h3>
+      </div>
+    </div>
+    <div class="explanation" id="explanation"></div>
+
+    <script>
+      function showExplanation(text) {
+        document.getElementById("explanation").innerText = text;
+      }
+
+      function navigateToHistory() {
+        window.location.href = "sejarah.html";
+      }
+
+      function navigateToTypes() {
+        window.location.href = "jenis.html";
+      }
+
+      function navigateToBenefits() {
+        window.location.href = "manfaat.html";
+      }
+
+      function navigateToRitual() {
+        window.location.href = "resep.html";
+      }
+
+      function navigateToRecipe() {
+        window.location.href = "utama.html";
+      }
+
+      function navigateToProfile() {
+        window.location.href = "profil.html";
+      }
+    </script>
+  </body>
+</html>
